@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_HashResult" Type="InArgument(x:String)" />
     <x:Property Name="in_Status" Type="InArgument(x:String)" />
+    <x:Property Name="in_WIID" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>693,1416</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>626,1417</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,19 +80,19 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_UpdateWorkItem" sap:VirtualizedContainerService.HintSize="476,1351" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_UpdateWorkItem" sap:VirtualizedContainerService.HintSize="476,1352" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: ACME System 1" sap:VirtualizedContainerService.HintSize="434,1259" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7c951a85-8770-4d17-92db-b26c07bd6912" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: ACME System 1" sap:VirtualizedContainerService.HintSize="434,1260" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7c951a85-8770-4d17-92db-b26c07bd6912" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1043" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1044" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -101,7 +102,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/84350337" DesignTimeRectangle="54, 344, 341, 54" ElementType="InputBox" FriendlyName="'TEXTAREA newComment'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='text' class='form-control' aaname='' /&gt;" Guid="9d4d0160-f10f-4a4e-8c53-b08f8b15edc1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAAA6CAYAAAAa5SqbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHMSURBVHhe7djBiuJAGIXReVqfVvIEWbpoQUSEgEpMDXcwQZuxCY3/7hy4Cyu1/pD60wAoI7IAhV4iOwxD6/u+dV3XttutmZmtXLqZfqajz5bI5kMu7Xa7djgc2vF4NDOzlUs308909Dm0S2RT4Fw4n8/ter22+/1uZmYrl26mn+loejpbIpv6nk6nNo5jm6bpcQrAGulm+pmOpqezJbJ5U7hcLgIL8EvpZzqans5eIpu/vAD8XjoqsgBFRBagkMgCFBJZgEIiC1BIZAEKiSxAIZEFKCSyAIVEFqCQyAIUElmAQiILUEhkAQqJLEAhkQUoJLIAhUQWoJDIAhQSWYBCIgtQSGQBCoksQCGRBSgksgCFRBagkMgCFBJZgEIiC1BIZAEKiSxAIZEFKCSyAIVEFqCQyAIUElmAQiILUEhkAQqJLECRzWYjsgAVEtgQWYAPmwMbIgvwQc+BDZEF+JDvgfUmC/Ah/wtsvI1s13Xtdrs9fgHwzrvARjqans6WyPZ9376+vto0TY8TAL77KbDpZzqans6WyA7D8K+++/2+jeP4OAVgjXQz/UxH09PZEtnIhxQ4l/KmYGZm65Zupp/PgY2XyALwWSILUKa1v6s6S3+AIorvAAAAAElFTkSuQmCC" InformativeScreenshot="e4b1d0cbae74be388bc140e524a9b00d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="54, 319, 108, 20" ElementType="Text" FriendlyName="'Add Comments'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Add Comments:' check:innerText='Add Comments:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAAYCAYAAAAiR3l8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVGhD7ZYBbrMwDIV3p55rXAVxE3qSimNU6h2yAH62YycUdWs1S3mSpb9A7Gd/hv1fqSu0OsDg6gCDqwMMrg4wuDrA4OoAg6sK8HEd0uVy2WK80cUj3cbt2eH6oAteyHmcb0kj1UUc5YytR5q/hzTf6eeLqgBcE6shTgtdP9BfALzPaUBNG2c8hBJm/A6ABOMyjfQ2jPm9sNJvSr5fA6iBfM9pOQQoS1PkgBfbKF8/ODPNahGpB3VOzqhhXu19vcxmDmbhtAcs63Cd1ZzQg3lBtuf2s/rLt4VeXNTLs1TdeoDLtB9eB63/LfIGENKE/xQiqgAb5latHoozBh4Hmm3dz5+r8g1vDxT3B3sdNRpfC/h0IBBbfw2ADd8803MAMXizsXoTuJBsJEC7TeJiYroKkHLKArRUywPPBMT6U8Pez9gc8hv10Q/7R0767f8ckAdzn8+zB8wMNdWX5fQMSpUAYZSBGaBZMFcUMsVrb65vWsnVbaixhUXuEz2U/vwwXY+mLgN2sdfwM0KNA4DsU6I6K6MCYNuYmHkLwAaYVWsuqVVuOvR/AO45XgNI4reV4slSC0B70AaGhgE5M2IYDcigZbvqW+VzbOJadtg6D3LTMD4AsFiYin4FkOV918QAeeiOuBmQGqINMSzAbLSa1rBcaE+t5/DMBwA2l51qngco53j+NtCH9UAigJKwNmA0XAeUG6f/fsv9rKLJMT+zG2wC3OTBFzkhA7F45hMAV1mI6t5zgFm6BwOeo1avDrArqjrA4OoAg6sDDK4OMLg6wODqAEMrpR8umdFuAZPGxwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -112,7 +113,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/84350337" DesignTimeRectangle="54, 438, 220, 34" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="7527d13e-c7cd-4900-9b50-5a1b941d7ea0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOAAAAAmCAYAAADdnJdIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFGSURBVHhe7d1BasJQFIbR7n8H2YAbKO7AjhSnUnAFduxMeO0PmkaIUDXxUjgH7iDJnX6aUd5bA8oIEApdBXg8Htt+v2/b7bZtNhtjzESTptJWGhvqA8yDLB0Oh3Y6nc53gSmkqbSVxoYR9gGmziwA80ljae2iDzBl+ueDeaWxtHbRB5j3VGB+w9YECC8mQCgkQCgkQCgkQCgkQCgkQCgkQCgkQCgkQCgkQLhD2ui6bnTW6/V56+8ECHcai/CR+EKA8IBhhI/GF5MF+PWxuPpFeN+1tlv+Xnfdoq0+V20x2OmWP0vwT6WTZ+KLyQIE7idAKCRAKCRAKCRAKCRAKCRAKCRAKCRAKCRAKCRAKDQaoE/Tw/xufpre4Swwv5uHszieDOaTptJWGhs9nizyIHVmKe+pxphpJk2lrWF8cRUg8FoChDKtfQN9AjebTm5TkAAAAABJRU5ErkJggg==" InformativeScreenshot="e729a6454d0529f0c58c6c833f91080a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="67, 445, 181, 20" ElementType="Text" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='filter-option pull-left' aaname='---' check:innerText='---' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAYCAYAAACm7VwXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVHhe7dTBCQJRDEBB++/gN7ANyHaw1rBYg0VET6slyGMGcgjk+MhtIE7k5ImcPJGTJ3LyRE6eyMkTOXkiJ0/k5ImcPJGTJ3Lyrshfj23WWtfcz5lz/+5rbXM8j9l+btb+OYI/55OTJ3LyRE6eyMkTOXkiJ0/k5ImcPJGTJ3LiZt4HfhCd9x3y1gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -123,7 +124,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/84350337" DesignTimeRectangle="75, 561, 68, 20" ElementType="Text" FriendlyName="'Completed'" FullSelectorArgument="&lt;webctrl aaname='Completed' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Completed' tag='SPAN' type='' class='text' check:innerText='Completed' /&gt;" Guid="e9317bc7-882a-443d-a52e-210afefe5247" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAYCAYAAABZY7uwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHDSURBVFhH7ZTrrcMgDIXvTp2rWQV1k3SSKmNUyg5cMCYcg4ObVmrzgyMh5WHs4w8nf36oqwHI0ABkaAAyNAAZGoAMDUCGFECrn68Xf7mUNd1Xfvd9Lbfg4bbwXV/rfXo5VhPtv86BQJEE9Jz91ABZvIugPij8iU4EKE2OOi0EbvLzk+/rKROmItAQ+0iw6T0VZdC0Sq7cFIHg9+6R3kU1gB5ui8NYypOfQ5PiueghSnpytx6gBsKeGM5mur7noluhbKLkxqZzA9vB8BTnxgUgguNCRlblOcPOontsWOxPvuq6+4Dq4nvS4oTRVNicAjbSNBGE8eU6HQTmjUIoElD00R54zEdQlD40L4cBaUmkGR2Q+HRrQAgvCGsUQClv+VxgaYDyRCgrelH7AF9Zhz+xXwOqJwjVAtrv5zig8Hj3J43mtEl74RPrAqpMFSh43fOXJGEbQJU+NC8AKIjHUppIhcrG137ShwBhfHXyCCs1hVMhoUlAOTdCQG8VcO69D4jEQGC1p8ZQcgyYegvQ1XkH+eq9bdMlVuTNTQIU2g/xmFv26vxMXkxA31UCJE2dSQOQoQHI0M8BnV0DkKEByNAA1JX3//08DpY5xl3WAAAAAElFTkSuQmCC" InformativeScreenshot="4ebf71c4d1d015ff8d9f348344d087ab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="55, 558, 218, 26" ElementType="Text" FriendlyName="'Completed'" FullSelectorArgument="&lt;webctrl aaname='Completed' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Completed' tag='A' type='' class='' check:innerText='Completed' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN4AAAAeCAYAAABDj6ADAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVHhe7ZjtbcIwEEC7E3ORVSw2CUPwGzFGgR1cf8Znx4G0KDYq70mWCLkcZ3SPs/i6Xq/6dDppANge65p1DvEAGoJ4AB1APIAOIB5ABxAPoAOIB9ABxAPoAOIBdADxADrQULy7Hvc7vdulNRzv4V57LgdTw+ESrh5zPw6rY2u45/ej+QYAPG3E+x71MBPtopUV8IWGfgXEg540EM9Puup0c0IOevwO1+VUzJrdimpiz15id981cxDYrZQryuIEC/fV2d+zzMQ7qylOxro88X0hT/Z+tgdLXpM6IB7kbC/eTK4lgnSTDOV1aOapgWNzp9xSpijGJHyYulGoTDwnnTIZA0XNUeKIu5YiZc/7usrPRTyQbC9e2dRL1OIyAXxDP51aocFnchhkfHrtBZd5LVK2XDxbx/yHxOZzslX2UasFPpu3Ea/enLLJ6+JlR9hSPCmlQX5GEs/nTcdGsWrixQlWWbaW6j5EXQCW7cUrjm1L9BavnHiSuXjL+0E8WMP24pl2W/xzRTZ9bTKuOGo+FK9o9iSbfP2oPk8u8RNRK/uoyggfTQPxDOF4lje3b+DUkOv+XPmVeDK+mFRSQi+LnGK5jLl4MbeUS9ZWiBz2jnggaSOeI4gm1nzKBNlijGj2P4m3V1qJfOWzc5lSbJY3yiNkc8+LeJk736vSo6sF8SDRULy2ePFodnhPEA+gA4gH0IF/Kx7AO4N4AB1APIAOIB5ABxAPoAOTeLfbDfEAGmFds84hHkBDvHg3/QNHOJ56ZO8YlQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -140,7 +141,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 466, 669" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVDhP7dNLEYAwDATQSkACzkAKDpAAzpCABNidbunQSdI7wzuRD9tTUjHBCZdhBa35DhhB5YMBO2yglo2L+nwp/W5IL4DCkChgAJV+iBewAGctjSuz6fgDvhvAS7SOqcUdHp7KagYOmB7hQ9zNf6V0A3RO22kz77CaAAAAAElFTkSuQmCC" InformativeScreenshot="f9032b3ff3e31ca2bdbb206ec07f615c.png" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="https://acme-test.uipath.com/work-items/update/84350337" />
+        <uix:TargetApp Area="0, 0, 466, 669" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVDhP7dNLEYAwDATQSkACzkAKDpAAzpCABNidbunQSdI7wzuRD9tTUjHBCZdhBa35DhhB5YMBO2yglo2L+nwp/W5IL4DCkChgAJV+iBewAGctjSuz6fgDvhvAS7SOqcUdHp7KagYOmB7hQ9zNf6V0A3RO22kz77CaAAAAAElFTkSuQmCC" InformativeScreenshot="f9032b3ff3e31ca2bdbb206ec07f615c.png" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot;+in_WIID]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

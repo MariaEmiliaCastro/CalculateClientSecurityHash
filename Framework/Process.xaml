@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>611,1698</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>626,1853</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -93,29 +93,17 @@
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="436,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_NavigateTo_WIDetails workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="System1\System1_NavigateTo_WIDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_System1_Url">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;System1_Url&quot;).ToString" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">[in_TransactionItem("WIID").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_System1_Url">[in_Config("System1_Url").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Depois do primeiro Navigate&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_ExtractClientInformation workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="System1\System1_ExtractClientInformation.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientID">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClientID" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientName">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClientName" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientCountry">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClientCountry" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientID">[ClientID]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientName">[ClientName]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_ClientCountry">[ClientCountry]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">[in_TransactionItem("WIID").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[ClientID +&quot;-&quot;+ ClientName]" />
@@ -136,8 +124,15 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke System1_UpdateWorkItem workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="System1\System1_UpdateWorkItem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_HashResult">[HashResult]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Status">Completed</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_HashResult">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="HashResult" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Status">
+          <Literal x:TypeArguments="x:String">Completed</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,282" sap2010:WorkflowViewState.IdRef="CommentOut_1">
