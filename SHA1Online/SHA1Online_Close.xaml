@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SHA1Online_Close" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,633" sap2010:WorkflowViewState.IdRef="SHA1Online_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SHA1Online_Close" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="514,623" sap2010:WorkflowViewState.IdRef="SHA1Online_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -26,6 +26,7 @@
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
     </sco:Collection>
@@ -34,7 +35,7 @@
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -42,43 +43,62 @@
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHA1Online_Close" sap:VirtualizedContainerService.HintSize="476,507" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHA1Online_Close" sap:VirtualizedContainerService.HintSize="476,558" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: SHA1 online" sap:VirtualizedContainerService.HintSize="434,415" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c1774793-2126-4032-aa70-98d32e8ed25b" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: SHA1 online" sap:VirtualizedContainerService.HintSize="434,466" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="411d4c29-1636-479a-bb68-bea8d1999084" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,199" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe SHA1 online'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="7185681445bd05c5b7fb8bc5bbc7503e" WaitForReady="INTERACTIVE" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'push button Fechar guia'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="411d4c29-1636-479a-bb68-bea8d1999084" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="270, 16, 17, 17" ElementType="Button" FriendlyName="'push button Fechar guia'" FullSelectorArgument="&lt;ctrl name='SHA1 online — Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='2' name='Barra de guias' role='page tab list' /&gt;&lt;ctrl name='SHA1 online' role='page tab' /&gt;&lt;ctrl name='Fechar guia' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SHA1 online — Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Barra de guias' role='page tab list' /&gt;&lt;ctrl name='SHA1 online' role='page tab' /&gt;&lt;ctrl name='Fechar guia' role='push button' automationid='' /&gt;" Guid="87406457-1e98-4b77-8225-a461c45e9973" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVDhP7ZLbCcAwCEW7l8tkGSdyQMstCEW0EWzylcBB4iWHvC4i0r850jjosFc6xlBmDjP0kUcZSKVYiOHFWf/N5/G9oCIE0zs1kYg8dSYEpYcyIWqUe/bv1IQm8vOMVJoJKuJUuuSfdjjSOOiwQEp6A5mIImbc95KbAAAAAElFTkSuQmCC" InformativeScreenshot="26bb95df5b44bba409c85f284f0f6c6a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='SHA1 online - Trabalho — Microsoft​ Edge' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="51, 8, 248, 33" ElementType="TabPage" FriendlyName="'page tab SHA1 online'" FullSelectorArgument="&lt;ctrl name='SHA1 online — Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='2' name='Barra de guias' role='page tab list' /&gt;&lt;ctrl name='SHA1 online' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SHA1 online — Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Barra de guias' role='page tab list' /&gt;&lt;ctrl name='SHA1 online' role='page tab' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPwAAAAlCAYAAABmmoSAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN/SURBVHhe7ZxLbuJAFEUZ9gZCQshPmfSADBhFithMNpO594LYQffUa2DcQzZQ7VvmmefyK2MMJP7cFx2ZqjKXSqRTZSDyhMVisVgs1hDLsVis0dTk5eXFaZ6fn93j46N7fX11q9WKENIz4C4chsuh3yXhccLT05Obz+duuVyaYYSQbgN34TBcDqUvhMeA7O739/fu4+PDDCOEdJv393fvsOzyWvqS8FgRcNLd3Z0ZRAjpB3AYLoe7fEX4h4cHCk9Iz4HDcPmo8Lj2v729NUMIIf0ADlvv473w6AC4BMBJ0+nUDCGE9AM4DJfD9/EXEf7f32nBr99/TsbKJIS05+rCQ1wKT0g3aCw8Ps4/V3gcBS12DCuTENIeOGx9NXc14fXxGFZmlM12/0+CqK3b6P7tJjh/47a71CWlvsSlO+d2aaL6FEnqdtlPmhhjZ5BPD4+zOV0hnxDNjwqPo4B2iJVp4mVUkmft1EuU0VR4ZGy3WYrK8eQLQTaYPeeawhNS5vPz0319fZlj6Me4NVbHjwuvjyFWpokpdd1YVfgksxrixQWE+BSefB+QGhVKH+tvQqeEx1FA28q0weVw5HK8kfCQeb+zRxeP48LjqUWpfCwmu3STXykEYwfh8TvI1cX+sQosLQr6hcIrFTIoQrnPkR10Tnh9tDLj7C+9s4rKoUuLklu3f44WT1MvvH8ZtVBAcmn7x8X783yeMsf8pfE4FF7l4SSZb2musphEPncgg0AkX6/X/thWdtBZ4YGVeZxclkL6QJDiHHOXtds5dcJjLFwkDgKHUur24bVC4XVeOatSld+PDA2RHUdrvCmdFF6wMhuhJT8qPGQyqvKc7gjPHX1cDHKHF9AWrEyTzBq9I/tdsKnwsfHKV2R1wufi6hw9h0sK7+dbGiNDRmQXycP2qXRC+BhWpg1k9H+HvKLvz4WD8AfhyqC/vJPWC183h4sKn+EXE1XW/En/icl9jvQ/JrwgcltYmYSMhcF8D98UK5MQ0p5vE14Ipa7DyiSEtOdbhG+LlUkIac9VhSeEdAsKT8iIoPCEjIiThL+5uTFDCCH9AA7XCo+7W4rwvGstIf0GDovw+s61JeFxH+vZbOZPtEIIIf0ADsPl8N70EzTC3f3t7c0MIYT0g8ViUdnlwQR3tkQnQAdlJ2QYQHrZyAFcn1gnEkKGCYUnZERQeEJGw8r9B9ibVPXrJgauAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="da5eecb842011a5574de2dc117602dec.png" Selector="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" Url="http://www.sha1-online.com/" />
+        <uix:TargetApp Area="-8, -8, 1382, 736" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="5da70cb4818c40eb76918713b7e8462b.png" Selector="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" Url="http://www.sha1-online.com/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
